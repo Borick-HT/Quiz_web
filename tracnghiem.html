@@ -1,0 +1,31 @@
+<div class="row" ng-show="!inProgress">
+    <div class="col text-center">
+        <button class="btn btn-primary"ng-click="start()">Start the Quiz</button>
+    </div>
+</div><br>
+<div ng-show=inProgess>
+    <div class="card" ng-repeat="ch in caccauhoi |limitTo:1:start" >
+        <div class="card-header">
+            {{ch.Text}}
+        </div>
+        <div class="card-body">
+         
+            <p class="card-text" ng-repeat="pa in ch.Answers">
+                <input type="radio" name="pa" value="{{pa.Id}}" class="mr-2">{{pa.Text}}
+            </p>
+        </div>
+        <div class="card-footer text-muted">
+            Diem:{{ch.Marks}}
+            <button ng-click="lui()" type="button"><i class="fa fa-arrow-left text-primary " aria-hidden="true"></i>
+            </button>
+            <button ng-click="tiep()" type="button"><i class="fa fa-arrow-right text-primary " aria-hidden="true"></i>
+            </button>
+        </div>
+        
+      </div>
+</div>
+     
+
+
+ 
+  

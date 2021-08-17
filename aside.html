@@ -1,0 +1,9 @@
+<div class="card mt-1 ml-n2 mr-n2"ng-controller="homectrl">
+  <div class="card-header"><i class="fa fa-list" aria-hidden="true"></i>
+    Danh Mục</div>
+  <div class="card-body row">
+      <ul class="col-sm-12 list-group mt-1" ng-repeat="m in monhoc | orderBy: 'Name'" >
+      <a href="#!tn/{{m.Id}}/{{m.Name}}">  <li class="list-group-item p-1 pl-3">{{m.Name|uppercase}}</li></a>  
+      </ul>                  
+  </div>
+</div>     
